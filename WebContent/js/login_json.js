@@ -15,7 +15,8 @@ $(document).ready(
 								$("#message").html("");
 								alert(data);
 								if(data){
-									$("#message").html("Login OK!");
+									//$("#message").html("Login OK!");
+									 window.location.href="/S2S3H4/person/admin.action";
 								}else{
 									// 为显示层添加获取到的数据
 									// 获取对象的数据用data.userInfo.属性

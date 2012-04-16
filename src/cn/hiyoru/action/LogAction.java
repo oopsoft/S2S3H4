@@ -1,5 +1,7 @@
 package cn.hiyoru.action;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
@@ -59,6 +61,13 @@ public class LogAction extends ActionSupport {
 		}
 		// System.out.println(loginMark);
 		return "login";
+	}
+
+	public String logout() {
+		Map<String, Object> session = ActionContext.getContext().getSession();
+		session.remove("userid");
+		session.remove("username");
+		return "logout";
 	}
 
 }
